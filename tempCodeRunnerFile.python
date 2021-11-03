@@ -1,0 +1,13 @@
+class Solution:
+    def stringPrefixPairs(self, strings=[]):
+        count = 0
+        for string in strings:
+            for i in range(len(strings)):
+                if string.startswith(strings[i]):
+                    count+=1
+
+        return count
+    
+    if __name__ == "__main__":
+        strings = ["abc", "a", "b", "a","ab"]
+        stringPrefixPairs(strings)
