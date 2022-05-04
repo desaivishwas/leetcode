@@ -5,7 +5,6 @@ class Node:
         self.val = val
         self.neighbors = neighbors if neighbors is not None else []
 """
-
 class Solution:
     def cloneGraph(self, node: 'Node') -> 'Node':
         oldNew = {}
