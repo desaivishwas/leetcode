@@ -1,5 +1,6 @@
 class Solution:
     def numTeams(self, rating: List[int]) -> int:
+        # O(n2)
         u_dp = [0 for _ in range(len(rating))]
         l_dp = [0 for _ in range(len(rating))]
         count = 0
