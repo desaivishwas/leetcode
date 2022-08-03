@@ -4,7 +4,7 @@ class Solution(object):
         
         def backtrack(s, openP, closeP):
             
-            if openP == closeP == n:
+            if openP + closeP == 2 * n:
                 res.append(s)
                 
             if openP < n:
