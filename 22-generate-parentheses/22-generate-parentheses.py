@@ -1,25 +1,13 @@
 class Solution(object):
     def generateParenthesis(self, n):
-        def generate(A = []):
-            if len(A) == 2*n:
-                if valid(A):
-                    ans.append("".join(A))
-            else:
-                A.append('(')
-                generate(A)
-                A.pop()
-                A.append(')')
-                generate(A)
-                A.pop()
+        result = []
+        def backtracking(p, left, right):
+            if left < n:
+                backtracking(p + '(', left + 1, right)
+            if right < left:
+                backtracking(p + ')', left, right + 1)
+            if right == n:
+                result.append(p),
 
-        def valid(A):
-            bal = 0
-            for c in A:
-                if c == '(': bal += 1
-                else: bal -= 1
-                if bal < 0: return False
-            return bal == 0
-
-        ans = []
-        generate()
-        return ans
+        backtracking('', 0, 0)
+        return result
