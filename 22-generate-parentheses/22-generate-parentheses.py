@@ -1,13 +1,20 @@
 class Solution(object):
     def generateParenthesis(self, n):
-        result = []
-        def backtracking(p, left, right):
-            if left < n:
-                backtracking(p + '(', left + 1, right)
-            if right < left:
-                backtracking(p + ')', left, right + 1)
-            if right == n:
-                result.append(p),
-
-        backtracking('', 0, 0)
-        return result
+        res = []
+        
+        def backtrack(s, openP, closeP):
+            
+            if openP == closeP == n:
+                res.append(s)
+                
+            if openP < n:
+                backtrack(s + '(', openP + 1, closeP)
+                
+            if closeP < openP:
+                backtrack(s + ')', openP, closeP + 1)
+                
+                
+        backtrack('', 0, 0)
+        
+        return res
+                
