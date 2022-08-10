@@ -9,7 +9,7 @@ class Solution:
     def dfs(self, grid, i, j, currGold):
         width, height = len(grid[0]), len(grid)
         if i < 0 or j < 0 or i >= height or j >= width or grid[i][j] == 0:
-            return
+            return 0
         goldInCell = grid[i][j]
         totalGold = currGold + goldInCell
         if totalGold > self.maxGoldFound:
