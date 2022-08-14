@@ -8,8 +8,6 @@ class Solution:
                 
             j += 1
                 
-                
-            
             
         return i == len(s)
         
