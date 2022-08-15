@@ -16,7 +16,9 @@ class Solution:
         for i in range(len(s)):
             char_counts[ord(s[i]) - ord('a')] += 1
             char_counts[ord(t[i]) - ord('a')] -= 1
-                
+         
+        
+        # return sum(char_counts) == 0
         for value in char_counts:
             if value != 0:
                 return False
