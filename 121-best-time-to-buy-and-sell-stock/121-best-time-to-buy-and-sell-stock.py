@@ -1,5 +1,6 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
+        """ O(n)  One Pass """
         
         minPrice = float('inf')
         maxP = 0
@@ -12,13 +13,7 @@ class Solution:
                 
         return maxP
                 
-        
-        
-        
-        
-        
-        
-        
+ 
         
         
 #         buy, sell = 0, 1
