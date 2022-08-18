@@ -7,7 +7,6 @@ class Solution:
             minHeap.append([dist,x,y])
             
         heapq.heapify(minHeap)
-        print(minHeap)
         res = []
         while k > 0:
             dist, x, y = heapq.heappop(minHeap)
