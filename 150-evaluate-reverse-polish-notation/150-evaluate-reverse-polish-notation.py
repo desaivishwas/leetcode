@@ -1,5 +1,9 @@
 class Solution:
     def evalRPN(self, tokens: List[str]) -> int:
+        
+        # Time: O(n)
+        # Space: O(n)
+        
         stack = []
         
         for token in tokens:
