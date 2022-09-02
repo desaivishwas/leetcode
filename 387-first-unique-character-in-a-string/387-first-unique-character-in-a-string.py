@@ -1,14 +1,14 @@
 class Solution:
     def firstUniqChar(self, s: str) -> int:
-        char_dict = {}
-        for char in s:
-            if char in char_dict:
-                char_dict[char] += 1
+        char = {}
+        for c in s:
+            if c in char:
+                char[c] += 1
             else:
-                char_dict[char]  = 1
+                char[c] = 1
                 
-        for i, char in enumerate(s):
-            if char_dict[char] == 1:
+                
+        for i, ch in enumerate(s):
+            if char[ch] == 1:
                 return i
         return -1
-                
