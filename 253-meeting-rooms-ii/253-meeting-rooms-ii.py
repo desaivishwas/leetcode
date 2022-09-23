@@ -5,7 +5,7 @@ class Solution:
         end =  sorted([end for start,end in intervals])
         
         res, count = 0, 0 
-        s, e= 0, 0
+        s, e = 0, 0
         while s < len(intervals):
             if start[s] < end[e]:
                 s += 1
