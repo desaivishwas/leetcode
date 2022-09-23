@@ -3,12 +3,11 @@ class Solution:
         if len(palindrome) <= 1:
             return ""
         
-        palindrome = list(palindrome)
-        
-        for i, letter in enumerate(palindrome[: len(palindrome) // 2]):
+        p =  list(palindrome)
+        for i, letter in enumerate(p[: len(p)//2]):
             if letter != 'a':
-                palindrome[i] = 'a'
-                return ''.join(palindrome)
-            
-        palindrome[-1] = 'b'
-        return ''.join(palindrome)
+                p[i] = 'a'
+                return ''.join(p)
+        
+        p[-1] = 'b'
+        return ''.join(p)
