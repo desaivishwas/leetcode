@@ -10,9 +10,6 @@ class Solution:
                     binary = binary + "1"
                     n = (n-1) // 2
 
-        else:
-            binary = "0"
-
         return "".join(reversed(binary))
 
     def sortByBits(self, arr: List[int]) -> List[int]:
