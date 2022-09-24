@@ -1,5 +1,5 @@
 class Solution:
-    def convertBinary(self, n):
+    def helper(self, n):
         binary = ""
         if (n != 0):
             while (n >= 1):
@@ -16,7 +16,7 @@ class Solution:
         arr.sort()
         d = []
         for num in arr:
-            d.append((num, self.convertBinary(num).count('1')))
+            d.append((num, self.helper(num).count('1')))
             
         d = sorted(d, key=lambda x:x[1])
         
