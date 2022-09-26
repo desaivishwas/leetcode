@@ -9,15 +9,15 @@ class Solution:
         # binary search
         left, right = 0, m * n - 1
         while left <= right:
-                pivot_idx = (left + right) // 2
-                pivot_element = matrix[pivot_idx // n][pivot_idx % n]
-                if target == pivot_element:
+                mid = (left + right) // 2
+                mid_elem = matrix[mid // n][mid % n]
+                if target == mid_elem:
                     return True
                 else:
-                    if target < pivot_element:
-                        right = pivot_idx - 1
+                    if target < mid_elem:
+                        right = mid - 1
                     else:
-                        left = pivot_idx + 1
+                        left = mid + 1
         return False
             
             
