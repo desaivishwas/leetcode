@@ -6,6 +6,7 @@
 #         self.right = right
 class Solution:
     def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
+        ''' Iterative approach  O(n) and O(n)'''
         
         if not root:
             return False
@@ -26,28 +27,7 @@ class Solution:
                 
         return False
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+    ''' recursive approcach --> O(n) and O(logN)'''
         
 #         if not root:
 #             return False
