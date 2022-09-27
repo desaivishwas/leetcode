@@ -6,6 +6,8 @@
 #         self.right = right
 class Solution:
     def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
+        
+        ''' DFS approach O(N) and O(logN)'''
         res = [0]
         
         def dfs(root):
