@@ -13,7 +13,7 @@ class Solution:
             nonlocal res
             if og:
                 inorder(og.left, clone.left)
-                if og is target:
+                if og == target:
                     res = clone
                     
                 inorder(og.right, clone.right)
