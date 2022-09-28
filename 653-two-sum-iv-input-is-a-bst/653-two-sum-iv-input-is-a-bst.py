@@ -13,8 +13,7 @@ class Solution:
         while stack:
             node = stack.pop()
             diff = k - node.val   
-            
-            
+        
             if diff in d:
                 return True
             else:
