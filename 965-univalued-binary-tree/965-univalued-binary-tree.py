@@ -6,8 +6,8 @@
 #         self.right = right
 class Solution:
     def isUnivalTree(self, root: Optional[TreeNode]) -> bool:
-        n = set()
         
+        n = set()
         stack = [root]
         
         while stack:
@@ -20,6 +20,5 @@ class Solution:
                     
                 if node.right:
                     stack.append(node.right)
-                    
                     
         return len(n) == 1
