@@ -6,9 +6,10 @@
 #         self.right = right
 class Solution:
     def averageOfLevels(self, root: Optional[TreeNode]) -> List[float]:
+        
+        ''' DFS based approach --> O(N) and O(N)'''    
         res, count = defaultdict(int), defaultdict(int)
-        
-        
+    
         def dfs(node,level):
             if not node:
                 return 0
