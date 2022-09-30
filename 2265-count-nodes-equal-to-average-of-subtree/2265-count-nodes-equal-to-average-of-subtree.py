@@ -6,7 +6,8 @@
 #         self.right = right
 class Solution:
     def averageOfSubtree(self, root: Optional[TreeNode]) -> int:
-    
+        
+        ''' DFS O(N) and O(N)'''
         
         def dfs(node):
             nonlocal res
@@ -22,6 +23,8 @@ class Solution:
                 res += 1
                 
             return left + right + node.val, total
+        
+    
         
         res = 0
         dfs(root)
