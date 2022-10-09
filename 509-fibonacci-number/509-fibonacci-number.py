@@ -1,7 +1,5 @@
 class Solution:
     def fib(self, n: int) -> int:
-        
-        print(n)
         def helper(n, memo):
             if memo[n] is not None:
                 return memo[n]
