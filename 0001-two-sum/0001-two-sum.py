@@ -5,7 +5,7 @@ class Solution:
             diff = target - nums[i]
             if diff in d:
                 return [d[diff], i]
-            else:
-                d[nums[i]] = i
+            
+            d[nums[i]] = i
                 
         
