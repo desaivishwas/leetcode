@@ -7,7 +7,6 @@
 class Solution:
     def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
         
-        
         stack = [(p, q)]
         while stack:
             p, q = stack.pop()
@@ -22,4 +21,5 @@ class Solution:
             stack.append((p.right, q.right))
             
         return True
+    
         # return (self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right))
