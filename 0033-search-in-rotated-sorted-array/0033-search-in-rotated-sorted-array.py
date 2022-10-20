@@ -9,8 +9,7 @@ class Solution:
                 if target >= nums[start] and  target < nums[mid]:
                     end = mid - 1
                 else:
-                    start = mid + 1
-                    
+                    start = mid + 1 
             else:
                 if target <= nums[end] and  target > nums[mid]:
                     start = mid + 1
