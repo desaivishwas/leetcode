@@ -6,6 +6,7 @@
 #         self.right = right
 class Solution:
     def buildTree(self, preorder: List[int], inorder: List[int]) -> Optional[TreeNode]:
+        ''' O(nlogn)'''
         
         if not preorder or not inorder:
             return
