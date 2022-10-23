@@ -1,14 +1,15 @@
-from collections import defaultdict
 class Solution:
     def highFive(self, items: List[List[int]]) -> List[List[int]]:
-        res = []
-        scores =  defaultdict(list)
+        d = defaultdict(list)
         
-        for score in items:
-            scores[score[0]].append(score[1])
-        for k, v in scores.items():
-            v.sort(reverse=True)
-            res.append([k , sum(v[:5]) // 5])
-            res.sort()
+        for i, marks in items:
+            d[i].append(marks)
             
+        res = []
+        for k, v in d.items():
+            v.sort(reverse = True)
+        for k, v in d.items():
+            res.append([k, sum(v[:5])//5])
+        res = sorted(res, key = lambda x:x[0])
         return res
+        
