@@ -4,7 +4,7 @@ class Solution:
             if n == 0:
                 return (res)
             else:
-                res = str(n % 2) + res
+                res += str(n % 2)
                 n = n // 2
                 return helper(n, res)
             
