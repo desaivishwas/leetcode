@@ -11,7 +11,7 @@ class Solution:
         res = []
         arr.sort()
         for num in arr:
-            res.append((num, helper(num, "").count("1")))
+            res.append((num, helper(num,"").count("1")))
             
         res.sort(key = lambda x:x[1])
         
