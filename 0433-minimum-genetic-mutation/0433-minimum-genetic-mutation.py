@@ -1,6 +1,6 @@
 class Solution:
     def minMutation(self, start: str, end: str, bank: List[str]) -> int:
-        ''' BFS approach '''
+        ''' BFS approach  --> O(bank), O(1)'''
         
         q =  deque([(start, 0)])
         visited = {start}
