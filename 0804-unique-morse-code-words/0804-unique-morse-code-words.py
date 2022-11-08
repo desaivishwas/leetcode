@@ -2,6 +2,12 @@ class Solution:
     def uniqueMorseRepresentations(self, words: List[str]) -> int:
         morse = [".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."]
         
-        seen = {"".join(morse[ord(c) - ord('a')] for c in word) for word in words}
-
-        return len(seen)
+        d = set()
+        
+        for word in words:
+            m = ""
+            for char in word:
+                m += morse[ord(char) - ord('a')]
+            print(m)
+            d.add(m)
+        return len(d)
