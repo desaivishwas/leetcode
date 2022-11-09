@@ -1,14 +1,14 @@
 class StockSpanner:
 
     def __init__(self):
-        self.stocks = []
+        self.stack = []
 
     def next(self, price: int) -> int:
         res = 1
-        while self.stocks and self.stocks[-1][0] <= price:
-            res += self.stocks.pop()[1]
+        while self.stack and self.stack[-1][0] <= price:
+            res += self.stack.pop()[1]
             
-        self.stocks.append([price,res])
+        self.stack.append([price,res])
         
         return res
 
