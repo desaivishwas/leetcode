@@ -6,7 +6,7 @@ class Solution:
             return False
         
         def check(a,b):
-            return [a,b] in similarPairs or [b,a] in similarPairs or len(a) == len(b)
+            return [a,b] in similarPairs or [b,a] in similarPairs or a == b
         
         for i in range(len(sentence1)):
             if not check(sentence1[i], sentence2[i]):
