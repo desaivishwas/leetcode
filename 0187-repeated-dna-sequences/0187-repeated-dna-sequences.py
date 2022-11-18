@@ -1,5 +1,7 @@
 class Solution:
     def findRepeatedDnaSequences(self, s: str) -> List[str]:
+        ''' Time and Space: O(n) and O(n)'''
+        
         l = 0
         r = 9
         seen = set()
